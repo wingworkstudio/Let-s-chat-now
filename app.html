@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lets-chatnow · 聊天</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="app-body">
+  <div class="app">
+    <!-- 侧边栏 -->
+    <aside class="sidebar">
+      <div class="me">
+        <div class="avatar" id="meAvatar">我</div>
+        <div class="me-info">
+          <div class="me-name" id="meName"></div>
+          <div class="me-status">在线</div>
+        </div>
+        <button class="logout" id="logoutBtn" title="退出登录">⎋</button>
+      </div>
+      <nav class="tabs">
+        <button class="tab active" data-tab="private">💬 私聊</button>
+        <button class="tab" data-tab="group">👥 群聊</button>
+        <button class="tab" data-tab="circle">🌐 圈子</button>
+        <button class="tab" data-tab="ai">🤖 AI</button>
+      </nav>
+      <div class="search">
+        <input id="searchInput" type="text" placeholder="搜索会话…">
+      </div>
+      <div class="session-list" id="sessionList"></div>
+    </aside>
+
+    <!-- 聊天区 -->
+    <main class="chat">
+      <header class="chat-header">
+        <div class="chat-title" id="chatTitle">选择一个会话开始聊天</div>
+        <div class="chat-desc" id="chatDesc"></div>
+      </header>
+      <div class="msg-box" id="msgBox">
+        <div class="empty-tip">👈 从左侧选择会话</div>
+      </div>
+      <footer class="composer">
+        <input id="msgInput" type="text" placeholder="输入消息，回车发送…" disabled>
+        <button id="sendBtn" disabled>发送</button>
+      </footer>
+    </main>
+  </div>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
